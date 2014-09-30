@@ -14,4 +14,6 @@ angular.module('angularMultiVersionExampleApp')
       'AngularJS',
       'Karma'
     ];
+
+    $scope.myangular = angular;
   });
