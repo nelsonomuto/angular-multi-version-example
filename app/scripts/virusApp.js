@@ -14,12 +14,8 @@
 $(function(){
     (function(angular){
         angular.module('virusApp', [
-            'ngAnimate',
-            'ngCookies',
             'ngResource',
-            'ngRoute',
-            'ngSanitize',
-            'ngTouch'
+            'ngSanitize'
         ])
             .config(function ($routeProvider) {
                 $routeProvider
