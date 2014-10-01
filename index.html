@@ -1,82 +1,158 @@
 <!doctype html>
-<html>
-  <head>
+<html class="no-js">
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Angular-multi-version-example by nelsonomuto</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/main.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/bacteria.css">
+    <link rel="stylesheet" href="styles/virus.css">
+    <!-- endbuild -->
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
 
-  </head>
-  <body>
-
-      <header>
-        <h1>Angular-multi-version-example</h1>
-        <p>SPA with multiple angular apps running different versions of angular</p>
-      </header>
-
-      <div id="banner">
-        <span id="logo"></span>
-
-        <a href="https://github.com/nelsonomuto/angular-multi-version-example" class="button fork"><strong>View On GitHub</strong></a>
-        <div class="downloads">
-          <span>Downloads:</span>
-          <ul>
-            <li><a href="https://github.com/nelsonomuto/angular-multi-version-example/zipball/master" class="button">ZIP</a></li>
-            <li><a href="https://github.com/nelsonomuto/angular-multi-version-example/tarball/master" class="button">TAR</a></li>
-          </ul>
-        </div>
-      </div><!-- end banner -->
-
-    <div class="wrapper">
-      <nav>
-        <ul></ul>
-      </nav>
-      <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-      <footer>
-        <p>Project maintained by <a href="https://github.com/nelsonomuto">nelsonomuto</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
-      </footer>
+<!-- Add your site or application content here -->
+<div id="host" class="container">
+    <div class="header">
+        <ul class="nav nav-pills pull-right">
+            <li  ng-class="{ 'active': route.current.activetab === 'main'}"><a ng-href="#">Host</a></li>
+            <li ng-class="{ 'active': route.current.activetab === 'virus'}"><a ng-href="#/virus">Virus</a></li>
+            <li  ng-class="{ 'active': route.current.activetab === 'bacteria'}"><a ng-href="#/bacteria">Bacteria</a></li>
+            <!--<li ng-class="{ 'active': route.current.activetab === 'fungi'}"><a ng-href="#/fungi">Fungi</a></li>-->
+        </ul>
+        <h3 class="text-muted">angularMultiVersionExample</h3>
+        <h4>Host application angular full version is: {{myangular.version.full}}</h4>
+        <h5>The host is responsible for the navigation menu: However each app implements its own router configuration independently.</h5>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
-  </body>
+    <div class="row">
+        <div class="col-md-6">Each application is wrapped in a closure to ensure full control of the angular global
+            variable
+        </div>
+        <div class="col-md-6">To ensure an application is fed its respective version of angular, each app is
+            manually bootstrapped
+        </div>
+    </div>
+
+    <div class="row">
+        <p>This container houses the various infection apps which use their respective version of angular</p>
+        <div ng-view="" class="col-md-12 infections"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 bacteriaAppContainer" id="innerbacteria"></div>
+    </div>
+    <div class="footer">
+        <!--<p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>-->
+    </div>
+</div>
+
+<div id="bacteria" class="bacteriaAppContainer infection row">
+    <div class="col-md-12" ng-view=""></div>
+</div>
+
+<div id="fungi" class="fungiAppContainer infection row">
+    <div class="col-md-12" ng-view=""></div>
+</div>
+
+<div id="virus" class="virusAppContainer infection row">
+    <div class="col-md-12" ng-view=""></div>
+</div>
+
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+</script>
+
+<!-- build:js(.) scripts/oldieshim.js -->
+<!--[if lt IE 9]>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/json3/lib/json3.js"></script>
+<![endif]-->
+<!-- endbuild -->
+<script>
+    var angularVersions = {};
+</script>
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
+<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
+<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
+<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
+<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
+<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
+<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+<script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+<script>
+    angularVersions[angular.version.full] = angular;
+    angular = null;
+</script>
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/hostApp.js"></script>
+
+<!--bacteriaApp-->
+<script src="bower_components/angular_1.2.25/angular.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script>
+    angularVersions[angular.version.full] = angular;
+    angular = null;
+</script>
+<script src="scripts/bacteriaApp.js"></script>
+<!--endbacteriaApp-->
+
+<!--virusApp-->
+<script src="bower_components/angular_1.0.7/angular.js"></script>
+<script src="bower_components/angular-resource_1.0.7/angular-resource.js"></script>
+<script src="bower_components/angular-sanitize_1.0.7/angular-sanitize.js"></script>
+<script>
+    angularVersions[angular.version.full] = angular;
+</script>
+<script src="scripts/virusApp.js"></script>
+<!--endvirusApp-->
+
+<!--<script src="scripts/fungiApp.js"></script>-->
+<!-- endbuild -->
+</body>
 </html>
