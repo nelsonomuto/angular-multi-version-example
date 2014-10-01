@@ -1,0 +1,20 @@
+<!doctype html> <html class="no-js"> <head> <meta charset="utf-8"> <title></title> <meta name="description" content=""> <meta name="viewport" content="width=device-width"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/main.9bebeee3.css">  <body> <!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]--> <!-- Add your site or application content here --> <div id="host" class="container"> <div class="header"> <ul class="nav nav-pills pull-right"> <li ng-class="{ 'active': route.current.activetab === 'main'}"><a ng-href="#">Host</a></li> <li ng-class="{ 'active': route.current.activetab === 'virus'}"><a ng-href="#/virus">Virus</a></li> <li ng-class="{ 'active': route.current.activetab === 'bacteria'}"><a ng-href="#/bacteria">Bacteria</a></li> <!--<li ng-class="{ 'active': route.current.activetab === 'fungi'}"><a ng-href="#/fungi">Fungi</a></li>--> </ul> <h3 class="text-muted">angularMultiVersionExample</h3> <h4>Host application angular full version is: {{myangular.version.full}}</h4> <h5>The host is responsible for the navigation menu: However each app implements its own router configuration independently.</h5> </div> <div class="row"> <div class="col-md-6">Each application is wrapped in a closure to ensure full control of the angular global variable </div> <div class="col-md-6">To ensure an application is fed its respective version of angular, each app is manually bootstrapped </div> </div> <div class="row"> <p>This container houses the various infection apps which use their respective version of angular</p> <div ng-view="" class="col-md-12 infections"></div> </div> <div class="row"> <div class="col-md-12 bacteriaAppContainer" id="innerbacteria"></div> </div> <div class="footer"> <!--<p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>--> </div> </div> <div id="bacteria" class="bacteriaAppContainer infection row"> <div class="col-md-12" ng-view=""></div> </div> <div id="fungi" class="fungiAppContainer infection row"> <div class="col-md-12" ng-view=""></div> </div> <div id="virus" class="virusAppContainer infection row"> <div class="col-md-12" ng-view=""></div> </div> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID --> <script>(function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');</script> <!--[if lt IE 9]>
+<script src="scripts/oldieshim.a466b7b1.js"></script>
+<![endif]--> <script>var angularVersions = {};</script> <script src="scripts/vendor.a0f1212c.js"></script> <script>angularVersions[angular.version.full] = angular;
+    angular = null;</script> <script src="scripts/scripts.709821d0.js"></script>  
