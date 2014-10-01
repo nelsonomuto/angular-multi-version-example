@@ -9,6 +9,14 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   color: #000;
   padding: 0.2em 0;
 }
+div.infection {
+  display: none;
+}
+div.infection.active {
+  position: relative;
+  display: block;
+  border: 2px solid grey;
+}
 
 /* Space out content a bit */
 body {

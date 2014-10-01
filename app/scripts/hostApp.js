@@ -55,8 +55,11 @@ $(function(){
         .controller('MainCtrl', function ($scope) {
 
         })
-        .controller('NavigateCtrl', function ($scope, $window, $location){
+        .controller('NavigateCtrl', function ($scope, $window, $location, $route){
             $window.location = $window.location;
+            var current = $route.current.activetab;
+            $('div.infection').removeClass('active');
+            $('#' + current).addClass('active');
         })
 
         angular.element($('#host')).ready(function(){
