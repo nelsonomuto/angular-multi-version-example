@@ -77,6 +77,11 @@ module.exports = function (grunt) {
           middleware: function (connect) {
             return [
               connect.static('.tmp'),
+              connect.static('.'),
+              connect.static('scripts'),
+              connect.static('images'),
+              connect.static('styles'),
+              connect.static('views'),
               connect().use(
                 '/bower_components',
                 connect.static('./bower_components')
@@ -92,7 +97,6 @@ module.exports = function (grunt) {
           middleware: function (connect) {
             return [
               connect.static('.tmp'),
-              connect.static('/'),
               connect.static('test'),
               connect().use(
                 '/bower_components',
