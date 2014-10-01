@@ -7,13 +7,15 @@
  * # MainCtrl
  * Controller of the angularMultiVersionExampleApp
  */
-angular.module('angularMultiVersionExampleApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+(function(angular){
+    angular.module('hostApp')
+      .controller('MainCtrl', function ($scope) {
+        $scope.awesomeThings = [
+          'HTML5 Boilerplate',
+          'AngularJS',
+          'Karma'
+        ];
 
-    $scope.myangular = angular;
-  });
+        $scope.myangular = angular;
+    });
+})(angularVersions['1.2.25']);

@@ -21,16 +21,17 @@
 <![endif]-->
 
 <!-- Add your site or application content here -->
-<div class="container">
+<div id="host" class="container">
     <div class="header">
         <ul class="nav nav-pills pull-right">
-            <li><a ng-href="#">Home</a></li>
-            <li><a ng-href="#/virus">Virus</a></li>
-            <li><a ng-href="#/bacteria">Bacteria</a></li>
-            <li><a ng-href="#/fungi">Fungi</a></li>
+            <li  ng-class="{ 'active': route.current.activetab === 'main'}"><a ng-href="#">Host</a></li>
+            <li ng-class="{ 'active': route.current.activetab === 'virus'}"><a ng-href="#/virus">Virus</a></li>
+            <li  ng-class="{ 'active': route.current.activetab === 'bacteria'}"><a ng-href="#/bacteria">Bacteria</a></li>
+            <!--<li ng-class="{ 'active': route.current.activetab === 'fungi'}"><a ng-href="#/fungi">Fungi</a></li>-->
         </ul>
         <h3 class="text-muted">angularMultiVersionExample</h3>
-        <h4>Host application. {{angular.version}}</h4>
+        <h4>Host application angular full version is: {{myangular.version.full}}</h4>
+        <h5>The host is responsible for the navigation menu: However each app implements its own router configuration independently.</h5>
     </div>
     <div class="row">
         <div class="col-md-6">Each application is wrapped in a closure to ensure full control of the angular global
@@ -45,10 +46,24 @@
         <p>This container houses the various infection apps which use their respective version of angular</p>
         <div ng-view="" class="col-md-12 infections"></div>
     </div>
-
+    <div class="row">
+        <div class="col-md-12 bacteriaAppContainer" id="innerbacteria"></div>
+    </div>
     <div class="footer">
         <!--<p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>-->
     </div>
+</div>
+
+<div id="bacteria" class="bacteriaAppContainer infection row">
+    <div class="col-md-12" ng-view=""></div>
+</div>
+
+<div id="fungi" class="fungiAppContainer infection row">
+    <div class="col-md-12" ng-view=""></div>
+</div>
+
+<div id="virus" class="virusAppContainer infection row">
+    <div class="col-md-12" ng-view=""></div>
 </div>
 
 
@@ -76,19 +91,13 @@
 <script src="bower_components/json3/lib/json3.js"></script>
 <![endif]-->
 <!-- endbuild -->
-
+<script>
+    var angularVersions = {};
+</script>
 <!-- build:js(.) scripts/vendor.js -->
 <!-- bower:js -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
-<script>
-    angularVersions = [];
-    window.angular = null;
-</script>
 <script src="bower_components/angular/angular.js"></script>
-<script>
-    angularVersions[angular.version.full] = angular;
-    window.angular = null;
-</script>
 <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
 <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
 <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
@@ -109,11 +118,43 @@
 <script src="bower_components/angular-route/angular-route.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
-
+<script>
+    angularVersions[angular.version.full] = angular;
+    angular = null;
+</script>
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
-<script src="scripts/app.js"></script>
-<script src="scripts/controllers/main.js"></script>
-<script src="scripts/controllers/about.js"></script>
+<script src="scripts/hostApp.js"></script>
+
+<!--bacteriaApp-->
+<script src="bower_components/angular_1.2.25/angular.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script>
+    angularVersions[angular.version.full] = angular;
+    angular = null;
+</script>
+<script src="scripts/bacteriaApp.js"></script>
+<!--endbacteriaApp-->
+
+<!--virusApp-->
+<script src="bower_components/angular_1.0.7/angular.js"></script>
+<script src="bower_components/angular-resource_1.0.7/angular-resource.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-sanitize_1.0.7/angular-sanitize.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script>
+    angularVersions[angular.version.full] = angular;
+</script>
+<!--<script src="scripts/virusApp.js"></script>-->
+<!--endvirusApp-->
+
+<!--<script src="scripts/fungiApp.js"></script>-->
 <!-- endbuild -->
 </body>
 </html>
