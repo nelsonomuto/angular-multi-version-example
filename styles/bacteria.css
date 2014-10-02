@@ -2,3 +2,8 @@
 div#bacteria {
   background-color: lightgreen;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/bacteria\.sass}line{font-family:\000034}}
+div#bacteria .floatingversion {
+  background-color: lightgreen;
+  color: black;
+}

@@ -2,3 +2,8 @@
 div#virus {
   background-color: lightpink;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/virus\.sass}line{font-family:\000033}}
+div#virus .floatingversion {
+  background-color: lightpink;
+  color: black;
+}
