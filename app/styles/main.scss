@@ -11,6 +11,10 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 }
 div.infection {
   display: none;
+  div {
+    overflow: auto;
+    padding: 0;
+  }
 }
 div.infection.active {
   position: relative;
