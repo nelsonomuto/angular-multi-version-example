@@ -53,7 +53,7 @@ $(function(){
             $rootScope.route = $route;
         })
         .controller('MainCtrl', function ($scope) {
-
+            $('div.infection').removeClass('active');
         })
         .controller('NavigateCtrl', function ($scope, $window, $location, $route){
             $window.location = $window.location;
