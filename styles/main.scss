@@ -17,6 +17,21 @@ div.infection.active {
   display: block;
   border: 2px solid grey;
 }
+.floatingversion, .floatingversionmain {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  color: white;
+  background: indianred;
+}
+.floatingversionmain {
+  z-index: 101;
+  padding: 0 0 0 48%;
+  background-color: black;
+  color: white;
+}
+
 #banner {
   z-index: 100;
   right: 50%;

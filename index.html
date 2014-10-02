@@ -43,6 +43,8 @@
     </div>
 </div>
 <div id="host" class="container">
+    <span ng-class="{ 'floatingversionmain': route.current.activetab === 'main'}"
+          ng-show="route.current.activetab === 'main'">{{myangular.version.full}}</span>
     <div class="header">
         <ul class="nav nav-pills pull-right">
             <li  ng-class="{ 'active': route.current.activetab === 'main'}"><a ng-href="#">Host</a></li>
@@ -52,13 +54,15 @@
         </ul>
         <h3 class="text-muted">angularMultiVersionExample</h3>
         <h4>Host application angular full version is: {{myangular.version.full}}</h4>
-        <h5>The host is responsible for the navigation menu: However each app implements its own router configuration independently.</h5>
+        <p>The host app has to be aware of what the other apps are, it is responsible for the navigation menu: However each app implements its own router configuration independently.</p>
+
+        <p>The only thing the host app knows about the other apps is their hash url however, thereby guaranteeing
+            maximum encapsulation.</p>
     </div>
 
     <div class="row">
         <div class="col-md-6 pros">
-            Each application is wrapped in a closure to ensure full control of the angular global
-            variable.
+            Each application is wrapped in a closure to ensure globals do not leak.
         </div>
         <div class="col-md-6 caveats">
             An intricate build process is required to maintain the app structure.
@@ -66,14 +70,13 @@
         <div class="col-md-6 pros">To ensure an application is fed its respective version of angular, each app is
             manually bootstrapped.
         </div>
+        <div class="col-md-6 pros">
+            Because angular does NOT allow embedding of apps. Each app is self-contained in the DOM in its own segregated element.
+        </div>
     </div>
 
     <div class="row">
-        <p>This container houses the various infection apps which use their respective version of angular</p>
         <div ng-view="" class="col-md-12"></div>
-    </div>
-    <div class="row">
-        <div class="col-md-12 bacteriaAppContainer" id="innerbacteria"></div>
     </div>
     <div class="footer">
         <!--<p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>-->

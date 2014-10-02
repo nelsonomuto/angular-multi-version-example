@@ -79,14 +79,10 @@ module.exports = function (grunt) {
               connect.static('.tmp'),
               connect.static('.'),
               connect.static('scripts'),
+              connect.static('bower_components'),
               connect.static('images'),
               connect.static('styles'),
-              connect.static('views'),
-              connect().use(
-                '/bower_components',
-                connect.static('./bower_components')
-              ),
-              connect.static(appConfig.app)
+              connect.static('views')
             ];
           }
         }
