@@ -7982,6 +7982,24 @@ div.infection.active {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\0000320}}
+.floatingversion, .floatingversionmain {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  color: white;
+  background: indianred;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\0000328}}
+.floatingversionmain {
+  z-index: 101;
+  padding: 0 0 0 48%;
+  background-color: black;
+  color: white;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\0000335}}
 #banner {
   z-index: 100;
   right: 50%;
@@ -7997,7 +8015,7 @@ div.infection.active {
   padding: 0 10px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\0000339}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\0000354}}
 #banner .button {
   border: 1px solid #dba500;
   background: linear-gradient(#ffe788, #ffce38);
@@ -8018,18 +8036,18 @@ div.infection.active {
   text-align: center;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\0000383}}
 #banner .button:hover {
   background: linear-gradient(#ffe788, #ffe788);
   background-color: #ffeca0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\0000377}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\0000392}}
 #banner .downloads {
   display: inline;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\0000380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\0000395}}
 #banner .downloads span {
   float: left;
   line-height: 52px;
@@ -8039,7 +8057,7 @@ div.infection.active {
   text-shadow: rgba(255, 255, 255, 0.2) 0 1px 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\0000388}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003103}}
 #banner ul {
   list-style: none;
   height: 40px;
@@ -8048,28 +8066,28 @@ div.infection.active {
   margin-left: 10px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\0000395}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003110}}
 #banner ul li {
   display: inline;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\0000398}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003113}}
 #banner ul li a.button {
   background-color: #FFE788;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003101}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003116}}
 #banner #githublinkcontainer {
   display: inline-block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003103}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003118}}
 #banner #githublinkcontainer a {
   top: -7px;
   left: 30px;
   position: relative;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003109}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003124}}
 #banner #logo {
   position: relative;
   height: 36px;
@@ -8082,14 +8100,14 @@ div.infection.active {
 }
 
 /* Space out content a bit */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003120}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003135}}
 body {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003126}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003141}}
 .header,
 .marketing,
 .footer {
@@ -8098,12 +8116,12 @@ body {
 }
 
 /* Custom page header */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003134}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003149}}
 .header {
   border-bottom: 1px solid #e5e5e5;
   /* Make the masthead heading the same height as the navigation */
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003138}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003153}}
 .header h3 {
   margin-top: 0;
   margin-bottom: 0;
@@ -8112,49 +8130,49 @@ body {
 }
 
 /* Custom page footer */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003147}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003162}}
 .footer {
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003153}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003168}}
 .container-narrow > hr {
   margin: 30px 0;
 }
 
 /* Main marketing message and sign up button */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003158}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003173}}
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003162}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003177}}
 .jumbotron .btn {
   font-size: 21px;
   padding: 14px 24px;
 }
 
 /* Supporting marketing content */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003169}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003184}}
 .marketing {
   margin: 40px 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003172}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003187}}
 .marketing p + h4 {
   margin-top: 28px;
 }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003179}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003194}}
   .container {
     max-width: 730px;
   }
 
   /* Remove the padding we set earlier */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003184}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003199}}
   .header,
   .marketing,
   .footer {
@@ -8163,23 +8181,23 @@ body {
   }
 
   /* Space out the masthead */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003191}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003206}}
   .header {
     margin-bottom: 30px;
   }
 
   /* Remove the bottom border on the jumbotron for visual effect */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003195}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003210}}
   .jumbotron {
     border-bottom: 0;
   }
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003200}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003215}}
 .row {
   padding: 20px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003204}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/omuton\/GitHub\/angular-multi-version-example\/styles\/main\.scss}line{font-family:\00003219}}
 .header {
   background-color: #FFCE7F;
   border: 1px solid #f0b500;
